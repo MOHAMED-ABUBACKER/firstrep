@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry Form</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <center>
+
+        
+    
+    
+    
+    
+    
+    <form id="myform">
+        <table>
+            <h1>Fill out this Form</h1>
+            <tr>
+                    <th><label for="name">Name : </label></th>
+                    <td><input id="name" type="text" required></td>
+                </tr>
+                <tr>
+                    <th><label for="age">Age : </label></th>
+                    <td><input id="age" type="number" required></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="gender">Gender : </label></th>
+                    <td>
+                        <select name="gender" id="gender" >
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">others</option>
+                        </select>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th><label for="email">Email : </label></th>
+                    <td><input id="email" type="email" required></td>
+                </tr>
+    
+            </table><br>
+    
+            <input id="submit" type="submit" value="submit">
+    
+        </form><br><br><br>
+    
+        <table id="datatable">
+            <h2>Student Details : </h2>
+            <thead>
+                <tr>
+                     
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+    
+            
+        </table>
+        
+    
+        <script>
+    
+                
+                    var myform = document.getElementById("myform").addEventListener("submit", function(event){
+                    event.preventDefault();
+                    
+    
+                    var name = document.getElementById("name")
+                    var age = document.getElementById("age")
+                    var gender = document.getElementById("gender")
+                    var email = document.getElementById("email")
+                    // var newele = document.createElement("tr")
+                    // dataTable.innerHTML = "<button>Delete</button>"
+                    // dataTable.append(newele)
+                    
+                    var datatable = document.getElementById("datatable").getElementsByTagName('tbody')[0]
+                    
+                    var newrow = datatable.insertRow() //tr
+    
+                    var dataname = newrow.insertCell(0)//td
+                    var dataage = newrow.insertCell(1)
+                    var datagender = newrow.insertCell(2)
+                    var dataemail =newrow.insertCell(3)
+                    var dele = newrow.insertCell(4)
+    
+                    dataname.innerHTML = name.value
+                    dataage.innerHTML = age.value
+                    datagender.innerHTML = gender.value
+                    dataemail.innerHTML = email.value
+    
+                    var createbutton = document.createElement("button")
+                    createbutton.innerHTML = "remove"
+    
+    
+                     //create delee button
+                    createbutton.onclick = function() {
+                        createbutton.parentElement.parentElement.remove()
+                    }
+                    dele.append(createbutton)
+    
+    
+                    document.getElementById("myform").reset()
+    
+                })
+        </script>
+</body>
+</html>

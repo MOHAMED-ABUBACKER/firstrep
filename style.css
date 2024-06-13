@@ -1,0 +1,70 @@
+
+            table,th,td{
+                border: 2px solid rgba(255, 255, 255, 0.696);
+                /* background-color: lightgreen;  */
+                color: rgba(0, 0, 0, 0.578);
+                font-style: italic;
+                padding: 5px;
+                border-radius: 10px;
+            }
+    
+            th,td{
+                border-radius: 5px;
+                height: 25px;
+                
+            }
+            
+            body{
+                background-color:rgb(7, 121, 5)
+            }
+            #name,#age,#gender,#email{
+                background: transparent;
+                border: none;  
+                height: 25px;
+                color: white;
+                font-style: italic;
+                border-style: none;
+                
+            }
+            #submit{
+                width: 250px;
+                height: 25px;
+                background-color: rgba(0, 0, 0, 0.635);
+                border: none;
+                color: white;
+                border-radius: 5px;
+            }
+            thead tr th{
+                padding: 10px;
+            }
+           tbody tr td{
+            color: white;
+           }
+    
+            h1{
+                color:whitesmoke ;
+                font-weight: 900;
+                font-style: oblique;
+            }
+    
+            h2{
+                color: whitesmoke;
+                font-weight: 900;
+                font-style: oblique;
+            }
+    
+            tbody tr td button{
+                height: 25px;
+                background-color: rgba(0, 0, 0, 0.635);
+                color: whitesmoke;
+                border: none;
+                border-radius: 5px;
+    
+            }
+            #datatable thead tr th{
+                /* height: 30px; */
+                /* background-color: white; */
+                /* justify-content: space-between; */
+                /* border: none; */
+            }
+      
